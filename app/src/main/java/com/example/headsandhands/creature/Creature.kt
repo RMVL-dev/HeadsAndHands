@@ -1,6 +1,5 @@
 package com.example.headsandhands.creature
 
-import android.util.Log
 import com.example.headsandhands.data.CreatureAttr
 
 interface Creature {
@@ -19,7 +18,7 @@ interface Creature {
             attackModifier=1
         }
 
-        var enemyDamage:Int = 0
+        var enemyDamage = 0
         for(i in 0..attackModifier) {
             when((1..6).random()){
                 5,6 -> {
@@ -36,6 +35,5 @@ interface Creature {
             healthPoints = if (creatureState.healthPoints-damage>0) creatureState.healthPoints - damage else 0
         )
         deathCheck()
-        Log.d("PLAYER", "player hp: ${creatureState.healthPoints} player death ${creatureState.death}")
     }
 }

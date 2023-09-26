@@ -7,8 +7,4 @@ class Monster(
     override var creatureState: CreatureAttr
 ):Creature {
 
-    override fun damage(damage: Int) {
-        super.damage(damage)
-
-    }
 }
